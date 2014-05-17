@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "EverJS - An Evernote Client wrapper",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "EverJS is an Evernote Client wrapper that enables Evernote SDK for JavaScript useing the same syntax just as it's Node.js version.",
+    "description": "The description of the application"
+  }
+}

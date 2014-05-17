@@ -1,0 +1,43 @@
+{
+    "name": "__MSG_appName__",
+    "version": "0.1.11",
+    "manifest_version": 2,
+    "description": "__MSG_appDescription__",
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "bower_components/evernote/evernote-sdk-js/thrift/lib/thrift.js",
+            "bower_components/evernote/evernote-sdk-js/thrift/lib/thrift-binary.js",
+            "bower_components/evernote/evernote-sdk-js/generated/Errors_types.js",
+            "bower_components/evernote/evernote-sdk-js/generated/Limits_types.js",
+            "bower_components/evernote/evernote-sdk-js/generated/NoteStore.js",
+            "bower_components/evernote/evernote-sdk-js/generated/NoteStore_types.js",
+            "bower_components/evernote/evernote-sdk-js/generated/Types_types.js",
+            "bower_components/evernote/evernote-sdk-js/generated/UserStore.js",
+            "bower_components/evernote/evernote-sdk-js/generated/UserStore_types.js",
+            "bower_components/jsOAuth/dist/jsOAuth-1.3.7.js",
+            "bower_components/jsOAuthChromeEx/app/scripts/jsOAuthChromeEx.js",
+            "scripts/chromereload.js",
+            "scripts/client.js",
+            "scripts/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon-19.png",
+            "38": "images/icon-38.png"
+        },
+        "default_title": "__MSG_appName__"
+    },
+    "web_accessible_resources": [
+        "oauth.html"
+    ],
+    "permissions": [
+        "tabs",
+        "https://sandbox.evernote.com/"
+    ]
+}

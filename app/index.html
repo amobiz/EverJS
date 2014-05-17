@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+
+        <!-- build:css styles/main.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <link href="styles/main.css" rel="stylesheet">
+        <!-- endbuild -->
+
+    </head>
+    <body>
+      <hgroup>
+        <h1>jsOAuth plugin for Google Chrome Extension</h1>
+        <h3>Evernote JavaScript Sample with Basic Access Permissions</h3>
+      </hgroup>
+
+      <section>
+        <div class="shadow-bottom transition" id="message"></div>
+      </section>
+
+      <section class="bar shadow-bottom">
+        <p><a target="_blank" href="https://bytespider.github.com/jsOAuth/">jsOAuth</a> is a JavaScript implimentation of the OAuth protocol. Currently supports version 1.0 (RFC5849) of the specification.</p>
+        <p>The <a target="_blank" href="https://github.com/amobiz/jsOAuthChromeEx/">jsOAuth plugin for Google Chrome Extension</a> is an extension that enables Google Chrome Extension support.
+          Please checkout <a target="_blank" href="https://github.com/amobiz/jsOAuthChromeEx/">README</a> for full description.</p>
+        <p>You'll need to create an account on Evernote
+          <a target="_blank" href="https://sandbox.evernote.com/">development server</a>.
+          And then "<a href="http://dev.evernote.com/doc">Get An API Key</a>"
+          and fill in the <code>consumerKey</code> and <code>consumerSecret</code> in the form below.
+          (Normally you will put these keys directly somewhere in your code.)</p>
+        <p>You can revoke access authorization on
+          <a target="_blank" href="https://sandbox.evernote.com/AuthorizedServices.action">Applications</a> management page.
+          If you did that, refresh this page to re-enable the "Authroize" button.</p>
+        <p>Please report issues <a target="_blank" href="https://github.com/amobiz/jsOAuthChromeEx/issues">here</a>.</p>
+        <p>Released under the MIT. Please see LICENSE in the project root folder for more information.</p>
+      </section>
+
+      <section class="bar shadow-bottom">
+        <header>API Key</header>
+        <form>
+          <div><label>consumerKey: <input type="text" id="consumerKey" name="consumerKey"></label></div>
+          <div><label>consumerSecret: <input type="text" id="consumerSecret" name="consumerSecret"></label></div>
+          <div><label>sandbox: <input type="checkbox" id="sandbox" name="sandbox"></label></div>
+          <button id="authorize">Authorize</button>
+        </form>
+      </section>
+
+      <section id="demo">
+        <section class="panel shadow-box">
+          <header>Notebooks</header>
+          <form>
+              <div><input type="text" name="notebookName" id="notebookName" placeholder="Notebook Name"><a class="btn" id="createNotebook" href="#">+Notebook</a></div>
+          </form>
+          <ul class="list" id="notebooks">
+          </ul>
+        </section>
+
+        <section class="panel shadow-box">
+          <header>Tags</header>
+          <form>
+              <div><input type="text" name="tagName" id="tagName" placeholder="Tag Name"><a class="btn" id="createTag" href="#">+Tag</a></div>
+          </form>
+          <ul class="list" id="tags">
+          </ul>
+        </section>
+
+        <section class="panel shadow-box">
+          <header>Note</header>
+          <form>
+              <div><input type="text" name="noteTitle" id="noteTitle" placeholder="Title"><a class="btn" id="createNote" href="#">+Note</a></div>
+              <div><select name="noteNotebook" id="noteNotebook"></select></div>
+              <div><textarea name="noteContent" id="noteContent" placeholder="Content"></textarea></div>
+          </form>
+        </section>
+      </section>
+
+
+      <!-- build:js scripts/main.js -->
+      <!-- bower:js -->
+      <!-- endbower -->
+      <script src="scripts/vanilla.js"></script>
+      <script src="scripts/evernote.js"></script>
+      <!-- endbuild -->
+    </body>
+</html>
