@@ -58,7 +58,7 @@ This sample uses Yeoman, please checkout [yeoman.io](http://yeoman.io/) for inst
     },
 ```
 
-    Don't use the minified version of evernote-sdk-js, because we need the "authenticationToken" veriable be reserved, as in the next step.
+Don't use the minified version of evernote-sdk-js, because we need the "authenticationToken" veriable be reserved, as in the next step.
 
 * In Gruntfile.js, add keyword "authenticationToken" to except in uglify.
 
