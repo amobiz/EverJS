@@ -23,16 +23,21 @@ This sample uses Yeoman, please checkout [yeoman.io](http://yeoman.io/) for inst
 
 * Generate the scaffolding using [generator-chrome-extension](https://github.com/yeoman/generator-chrome-extension).
 
+```
     yo chrome-extension
+```
 
 * Add required libraries.
 
+```
     bower install evernote
     bower install git://bytespider.github.com/jsOAuth.git
     bower install git://github.com/amobiz/jsOAuthChromeEx.git
+```
 
 * In manifest.json, add the required scripts for event/background page.
 
+```
     "background": {
         "scripts": [
             "bower_components/evernote/evernote-sdk-js/thrift/lib/thrift.js",
@@ -51,11 +56,13 @@ This sample uses Yeoman, please checkout [yeoman.io](http://yeoman.io/) for inst
             "scripts/background.js"
         ]
     },
+```
 
     Don't use the minified version of evernote-sdk-js, because we need the "authenticationToken" veriable be reserved, as in the next step.
 
 * In Gruntfile.js, add keyword "authenticationToken" to except in uglify.
 
+```
     uglify: {
         options: {
             mangle: {
@@ -63,26 +70,34 @@ This sample uses Yeoman, please checkout [yeoman.io](http://yeoman.io/) for inst
             }
         }
     },
+```
 
 * In manifest.json, add "web_accessible_resources".
 
+```
     "web_accessible_resources": [
         "oauth.html"
     ],
+```
 
 * In manifest.json, add permission to "https://sandbox.evernote.com/".
 
+```
     "permissions": [
         "tabs",
         "https://sandbox.evernote.com/"
     ]
+```
 
 * In background.js, setup the jsOAuth:
 
+```
     OAuth.initBackgroundPage();
+```
 
 * To authorize using OAuth, create an Evernote.Client object, and then call it's authorize method.
 
+```
     var client = new Evernote.Client({
         consumerKey: 'your consumerKey',
         consumerSecret: 'your consumerSecret',
@@ -95,6 +110,7 @@ This sample uses Yeoman, please checkout [yeoman.io](http://yeoman.io/) for inst
     }, function( error ) {
         handleEDAMException( error );
     });
+```
 
   You'll need to replace the consumer key and secret with your own.
 
