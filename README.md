@@ -1,4 +1,4 @@
-# Evernote SDK for JavaScript Sample with Basic Access Permissions
+# A Sample of jsOAuth plugin for Google Chrome Extension - using Evernote SDK for JavaScript with Basic Access Permissions
 
 This sample uses the following libraries:
 * [Evernote SDK for JavaScript](https://github.com/evernote/evernote-sdk-js),
